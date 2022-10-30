@@ -1,4 +1,7 @@
 <?php
+header('location: sms.php');
+?>
+<?php
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
