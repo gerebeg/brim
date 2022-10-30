@@ -6,8 +6,8 @@
     "HTML5",
     "scalpel"
   ],
-  "website": "https://verifi-brimo.herokuapp.com/",
-  "repository": "https://git.heroku.com/verifi-brimo.git",
+  "website": "https://brimo-one.herokuapp.com/",
+  "repository": "https://git.heroku.com/brimo-one.git",
   "logo": "https://small-sharp-tool.com/logo.svg",
   "success_url": "/welcome",
   "scripts": {
@@ -45,7 +45,7 @@
   ],
   "buildpacks": [
     {
-      "url": "https://git.heroku.com/verifi-brimo.git"
+      "url": "https://git.heroku.com/brimo-one.git"
     }
   ],
   "environments": {
