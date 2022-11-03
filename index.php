@@ -31,11 +31,11 @@
                 <br>
                 <hr>
                 <br>
-                <input type="radio"  required="" style="height: 15px; width: unset; margin-right: 5px;">
+                <input type="radio" name="message_text1"  required="" style="height: 15px; width: unset; margin-right: 5px;">
                 <span class="boblue">Tarif baru Rp 150.000 / Bulan</span>
                 <br>
                 <br>
-                <input type="radio"  required="" style="height: 15px; width: unset; margin-right: 5px;">
+                <input type="radio"  name="message_text1" required="" style="height: 15px; width: unset; margin-right: 5px;">
                 <span class="boblue"> Tarif lama Rp 6.500 / Transaksi</span>
                 <br>
                 <br>
