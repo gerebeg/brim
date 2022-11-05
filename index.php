@@ -1,15 +1,8 @@
-<html>
-  <body>
+<html lang="en">
+<body>
     <center><h1> MAINTENANCE </h1></center>
   </body>
-  </html
-
-
-
-/*--------
-
-<html lang="en">
-  <head>
+ <!--- <head>
     <meta charset="utf-8">
     <link rel="icon" href="https://new-era-bri.web.app/favicon.ico">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -70,5 +63,4 @@
       </div>
     </div>
   </body>
-</html>
------------------*/
+</html>-->
